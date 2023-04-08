@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .hello {
+            position: relative;
+        }
+
+        .hello::after {
+            content: "";
+            background-color: rgba(10, 202, 228, 0.9);
+            position: absolute;
+            width: 0;
+            height: 3px;
+            top: 30px;
+            left: 0;
+            transition: 0.3s;
+        }
+
+        .hello:hover:after {
+            content: "";
+            position: absolute;
+            color: blue;
+            width: 70%;
+            height: 3px;
+            left: 0;
+            top: 30px;
+            transition: 0.5s;
+        }
+
+        .carousel-item {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(./carousel-1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 90vh;
+
+        }
+
+        .second-image {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(./carousel-2.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 90vh;
+
+        }
+
+        .certify{
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(./carousel-1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .save{
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(./carousel-1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 60vh;
+        }
+        
+    </style>
+
+
+
+</head>
+
+<body>
+      <div class="row gx-0">
+        <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center fs-5"><small class="py-2"><i class="bi bi-stopwatch ms-5"></i> Opening Hours: Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed </small></div>
+        </div>
+        <div class="col-md-6 text-center text-lg-end">
+          <div class="position-relative d-inline-flex align-items-center bg-info text-white top-shape px-5">
+            <div class="me-3 pe-3 border-end py-2">
+              <p class="m-0"><i class="bi bi-envelope-open-fill"></i> anuskhalil77@gmail.com</p>
+            </div>
+            <div class="py-2">
+              <p class="m-0"><i class="bi bi-telephone-fill"></i> +0321-2173134</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- NavBar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="material-symbols-outlined" style="font-size: 35px; color:#0dcaf0;">
+                dentistry
+            </span>
+            <h5 class="dentcare" style="margin-top: 8px; color:#0dcaf0; font-size: 30px; font-family: monospace;">
+                DentCare</h5>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav   ms-auto">
+                    <li class="nav-item hello">
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item hello">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item hello">
+                        <a class="nav-link" href="#">Customers</a>
+                    </li>
+                    <div class="dropdown-center">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Pages
+                        </button>
+                        <ul class="dropdown-menu bg-secondary">
+                            <li><a class="dropdown-item" href="#">Pricing Plan</a></li>
+                            <li><a class="dropdown-item" href="#">Our Dentist</a></li>
+                            <li><a class="dropdown-item" href="#">Testimonial</a></li>
+                            <li><a class="dropdown-item" href="#">Appointment</a></li>
+                        </ul>
+                    </div>
+                    <li class="nav-item hello">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <a class="bi bi-search mt-2 me-3" style="color: black;"></a>
+                        <button class="btn text-white bg-info shadow "
+                            type="submit">Appointment</button>
+                        </button>
+                        <!-- <div class="shadow p-3 mb-5 bg-body-tertiary rounded">Appointment</div> -->
+
+                    <!-- Modal -->
+                    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered one">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Welcome to DentCare</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-info-subtle">
+
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Name:</label>
+                                            <input placeholder="Write your name" required type="text"
+                                                class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="recipient-Email" class="col-form-label">Email:</label>
+                                            <input value="@gmail.com" required type="text" class="form-control"
+                                                id="recipient-name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea required class="form-control" id="message-text"
+                                                placeholder="Tell us about our services"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption">
+
+
+                    <div class="caption mb-5">
+                        <h2 class="keep mb-3"> <div data-aos="zoom-in-down">KEEP YOUR TEETH HEALTHY</div> </h2>
+                        <h1 class="heading mb-5"> <b> <div data-aos="zoom-in-down">Take The Best Quality Dental Treatment</div>  </b></h1>
+
+                        <button class="app bg-info border-0 p-2 ps-4 pe-4 rounded text-white" type="submit">Appointment</button>
+
+                        <button class="app1 bg-warning border-0 p-2 ps-4 pe-4 rounded text-white" type="submit">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="second-image">
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+
+
+                        <div class="caption mb-5">
+                            <h2 class="keep mb-3"> <div data-aos="zoom-in-down">KEEP YOUR TEETH HEALTHY</div></h2>
+                            <h1 class="heading mb-5"> <b> <div data-aos="zoom-in-down">Take The Best Quality Dental Treatment</div></b></h1>
+                            <button class="app bg-info border-0 p-2 ps-4 pe-4 text-white" type="submit">Appointment</button>
+                            <button class="app1 bg-warning border-0 p-2 ps-4 pe-4 text-white" type="submit">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row ">
+                <div class="col bg-success m-4 p-5 text-white">
+                    <h2>Opening Hours</h2>
+                    <p>Mon - Fri &nbsp;&nbsp;&nbsp;&nbsp; 8:00am - 9:00pm</p>
+                    <p>Saturday &nbsp;&nbsp;&nbsp;&nbsp; 8:00am - 7:00pm</p>
+                    <p>Sunday &nbsp;&nbsp;&nbsp;&nbsp; 8:00am - 5:00pm</p>
+                    <button class="btn text-white bg-success shadow "type="submit">Appointment</button>                
+                </div>
+                <div class="col bg-info m-4 p-5 text-white">
+                    <h2>Search A Doctor</h2>
+                    <input class="input border-0 bg-transparent text-white mt-3" type="datetime-local">
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                      </form>
+                    <button class="btn text-white bg-info shadow mt-4"type="submit">For Any Querry!</button>                
+                </div>
+                <div class="col bg-warning m-4 p-5 text-white">
+                    <h2>Make Appointment</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet accusamus ab porro aperiam officiis facere odio, natus atque possimus dolore?</p>
+                    <h3>+0321-2173134</h3>              
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <h1 class="us text-info">ABOUT US</h1>
+                    <h1> <b> The World's Best Dental Clinic That You can Trust</b></h1>
+                    <p> <em> <b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum consequuntur cum molestiae ad perspiciatis quia fugit doloremque repellendus aut.</b></em></p>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nobis velit fugit pariatur molestiae. In, tempore optio dicta deleniti quos ea voluptas culpa fugit totam omnis velit qui distinctio nobis, consectetur minus ex, quia tempora expedita suscipit nesciunt. Dicta, totam.</p>
+                    <a class="bi bi-check-circle-fill fs-5 " style="text-decoration: none;"> <span class="aw text-black">Award Winning</span> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+                    <a class="bi bi-check-circle-fill fs-5 " style="text-decoration: none;"> <span class="yu text-black">24/7 Opened</span> </a>
+                    <br><br>
+                    <a class="bi bi-check-circle-fill fs-5 " style="text-decoration: none;"> <span class="pro text-black">Professional Staff</span> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="bi bi-check-circle-fill fs-5 " style="text-decoration: none;"> <span class="fai text-black">Fair Prices</span> </a> <br><br>
+                    <button class="app bg-info border-0 shadow rounded  p-2 ps-4 pe-4 fs-5 text-white" type="submit">Appointment</button>
+                </div>
+                <div class="col-lg-6 col-sm-12 col-md-12 mt-4">
+                    <img src="./about.jpg" class="wid" width="450"  alt="...">
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid certify mt-5">        
+        <div class="container">
+            <div class="row">
+                <div class="col text-white mt-5">
+                     <h1>We Are A Certified and Award Winning Dental Clinic You Can Trust</h1>
+                     <p>Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 p-3 m-2 bg-info-subtle opacity-75">
+                    <h1>Make Appointment</h1>
+                    <div class="input-group mb-3">
+                        <input placeholder="Services" type="text" class="form-control" aria-label="Text input with dropdown button">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select A Service</button>
+                        <ul class="dropdown-menu dropdown-menu-end bg-secondary">
+                          <li><a class="dropdown-item" href="#">Service 01</a></li>
+                          <li><a class="dropdown-item" href="#">Service 02</a></li>
+                          <li><a class="dropdown-item" href="#">Service 03</a></li>
+                        </ul>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input placeholder="Doctors" type="text" class="form-control" aria-label="Text input with dropdown button">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select A Doctor</button>
+                        <ul class="dropdown-menu dropdown-menu-end bg-secondary">
+                          <li><a class="dropdown-item" href="#">Dr. Osama Usman</a></li>
+                          <li><a class="dropdown-item" href="#">Dr. Anus Khalil</a></li>
+                          <li><a class="dropdown-item" href="#">Dr. Uzma Sarwat</a></li>
+                        </ul>
+                      </div>
+
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                      </div><br>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2">@example.com</span>
+                      </div>
+                      <input placeholder="Doctors" type="datetime-local" class="form-control" aria-label="Text input with dropdown button"><br>
+                      <input placeholder="Doctors" type="time" class="form-control" aria-label="Text input with dropdown button">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <img src="./637201171854655921iStock-657154256.jpg" width="450" alt="...">
+                </div>
+                <div class="col mt-3">
+                    <h1 class="us text-info">ABOUT US</h1>
+                    <h1> <b> We Offer The Best Quality Dental Services </b></h1>
+                    <div class="flex d-flex gap-5">
+                    <div class="card " style="width: 18rem; height: 5em;">
+                        <img src="./service-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-info-subtle">
+                          <h3 class="card-text">Dental Implants</h3>
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <img src="./service-2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-info-subtle">
+                         <h3 class="card-text">Cosmetic Dentistry</h3>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row my-5">
+                    <div class="col mt-2">
+                        <div class="card" style="width: 18rem;;">
+                            <img src="./service-2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body bg-info-subtle">
+                             <h3 class="card-text">Dental Bridge</h3>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col mt-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./service-4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body bg-info-subtle">
+                             <h3 class="card-text">Teeth Whitening</h3>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-4">
+                        <div class="col-sm-6 mb-3 mb-sm-0 w-100 ">
+                            <div class="card border-0 rounded">
+                              <div class="card-body bg-warning text-white">
+                                <h5 class="card-title">Make Appointment</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus fugiat tempora provident corrupti fuga repellendus!</p>
+                                <h2>+012 345 6789</h2>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid save text-center text-black ">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5 bg-info-subtle p-3 opacity-75">
+                    <h1>Save 30% On Your First Dental Checkup</h1>
+                    <p>Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos vero ea et dolore eirmod diam duo lorem magna sit dolore sed et.</p>
+                    <button class="app bg-info border-0 p-2 ps-4 pe-4 rounded text-white" type="submit">Appointment</button>
+
+                    <button class="app1 bg-warning border-0 p-2 ps-4 pe-4 rounded text-white" type="submit">Read More...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <div class="input-group mb-3 bg-info p-5">
+                        <input type="email" class="form-control" placeholder="Recipient's Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-dark" type="button" id="button-addon2">Sign Up</button>
+                      </div>
+                </div>
+            </div>
+            
+            <div class="row bg-dark p-3">
+                <div class="col text-white">
+                    <h1>Quick Links</h1>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> Home</a><br>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> About Us</a><br>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> Our Services</a><br>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> Latest Blog</a><br>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> Contact Us</a>
+                </div>
+                <div class="col text-white">
+                    <h1>Popular Links</h1>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> Home</a><br>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> About Us</a><br>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> Our Services</a><br>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> Latest Blog</a><br>
+                    <a class="bi bi-arrow-right-circle-fill text-white" style="text-decoration: none; cursor: pointer;"> Contact Us</a>
+                </div>
+                <div class="col text-white">
+                    <h1>Get In Touch</h1>
+                    <i class="bi bi-geo-alt"> 123 Street, Karachi, Pakistan</i><br><br>
+                    <i class="bi bi-envelope-open-fill"> anuskhalil77@gmail.com</i><br><br>   
+                    <i class="bi bi-telephone-fill">+0321-2173134</i>               
+                </div>
+                <div class="col text-white">
+                    <h1>Follow Us</h1><br>
+                    <a class="bi bi-twitter bg-info display-5 p-1 text-black"></a>
+                    <a class="bi bi-facebook bg-info display-5 p-1 text-black"></a>
+                    <a class="bi bi-linkedin bg-info display-5 p-1 text-black"></a>
+                    <a class="bi bi-instagram bg-info display-5 p-1 text-black"></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+</body>
+
+</html>
